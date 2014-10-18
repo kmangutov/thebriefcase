@@ -9,10 +9,13 @@ function onLinkedInAuth() {
 
 function displayProfiles()
 {
-	 member = profiles.values[0];
-		 document.getElementById("profiles").innerHTML = 
-  "<p id=\"" + member.id + "\">Hello " +  member.firstName + " " + member.lastName + "</p>";
-  	 enumerate_profile_properties(member);
+	member = profiles.values[0];
+	//	 document.getElementById("profiles").innerHTML = 
+	//"<p id=\"" + member.id + "\">Hello " +  member.firstName + " " + member.lastName + "</p>";
+  	//enumerate_profile_properties(member);
+
+  	document.getElementById("profiles").innerHTML = 
+  		member;
 }
 
 function enumerate_profile_properties(member)
