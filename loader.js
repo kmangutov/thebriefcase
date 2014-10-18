@@ -26,7 +26,13 @@ function enumerate_profile_properties(member)
 		console.log("Name: " + property);
 		console.log("Value: " + member[property]);
 	}
-	
+	output_json(member);
+}
+
+function output_json(data) {
+	var url = 'data:text/json;charset=utf8,' + encodeURIComponent(data);
+	window.open(url, '_blank');
+	window.focus();
 }
 
 function onLinkedInLoad() {
