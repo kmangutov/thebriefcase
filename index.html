@@ -5,42 +5,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<script type="text/javascript">
-			
-		
-		function onLinkedInAuth() {
-			console.log("LinkedIn API framework initialized!");
-			//reference: https://developer.linkedin.com/documents/javascript-api-tutorial
-			IN.API.Profile("me").result(displayProfiles); //argument for result is callback function
-		}
-		
-		function displayProfiles()
-		{
-			 member = profiles.values[0];
-     		 document.getElementById("profiles").innerHTML = 
-          "<p id=\"" + member.id + "\">Hello " +  member.firstName + " " + member.lastName + "</p>";
-          	 enumerate_profile_properties(member);
-		}
-		
-		function enumerate_profile_properties(member)
-		{
-			var property;
-			for(property in member)
-			{
-				console.log("Name: " + property);
-				console.log("Value: " + member[property]);
-			}
-			
-		}
-
-		function onLinkedInLoad() {
-		     IN.Event.on(IN, "auth", onLinkedInAuth);
-		}
-		
-		
-		
-	
-	</script>
+	<script type="text/javascript" src="loader.js"></script>
 
 	<script type="text/javascript" src="http://platform.linkedin.com/in.js">
 		api_key: 75nhi6gsa4ygff 
