@@ -3,23 +3,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+	<meta charset="utf-8">
 
-<script type="text/javascript" src="http://platform.linkedin.com/in.js">
-api_key: 75nhi6gsa4ygff //no semicolon, otherwise the console will yell at you...
-//The names of JavaScript functions which should be invoked once the framework has finish$
-onLoad: console.log("Imported LinkedIn API");
-//if true, then the framework will attempt to auto-login the user.
-authorize: false;
-//default=en_US more options here:
-lang: en_US;
-</script>
+	<script type="text/javascript" src="http://platform.linkedin.com/in.js">
+		api_key: 75nhi6gsa4ygff //no semicolon, otherwise the console will yell at you...
+		//The names of JavaScript functions which should be invoked once the framework has finish$
+		onLoad: console.log("Imported LinkedIn API");
+		//if true, then the framework will attempt to auto-login the user.
+		authorize: false;
+		//default=en_US more options here:
+		lang: en_US;
+		
+		function onLinkedInLoad() {
+		     IN.Event.on(IN, "auth", onLinkedInAuth);
+		     helloWorld();
+		}
+		
+		function helloWorld()
+		{
+			console.log("Hello, world!")
+		}
+		
+		
+	
+	</script>
 
 </head>
 
 <body>
-<h1>Hello</h1>
-<h2>Harrision Kiang is an </h2><h1>imposter</h1>
+	<h1>Hello</h1>
+	<h2>Harrision Kiang is an </h2><h1>imposter</h1>
 <h3>test</h3>
 
 	<script type="in/Login">
