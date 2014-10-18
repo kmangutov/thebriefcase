@@ -7,7 +7,7 @@ function onLinkedInAuth() {
 	IN.API.Profile("me").result(displayProfiles); //argument for result is callback function
 }
 
-function displayProfiles()
+function displayProfiles(profiles)
 {
 	member = profiles.values[0];
 	//	 document.getElementById("profiles").innerHTML = 
